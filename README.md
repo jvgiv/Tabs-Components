@@ -46,6 +46,8 @@ complete
 
 * Once you have completed the above, add a couple Tabs to the HTML in order to see first hand how great building webpages with components is!
 
+complete
+
 ### Stretch Goals
 
 * Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
