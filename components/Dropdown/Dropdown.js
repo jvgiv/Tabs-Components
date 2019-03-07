@@ -14,13 +14,17 @@ class Dropdown {
     
     // Add a click handler to the button reference and call the toggleContent 
     // method.
-    this.button.addEventListener('click', () => this.toggleContent())
+    this.button.addEventListener('click', () => this.toggleContent());
   }
 
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+    TweenLite.to(".dropdown-content", 2.5, { ease: Back.easeOut.config(1.7), y: 250, onComplete:tweenComplete2});
+    function tweenComplete2() {
+      TweenLite.to(".dropdown-content", 2.5, { ease: Back.easeOut.config(1.7), y: 0 });
+    }
   }
 }
 
